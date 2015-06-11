@@ -1,0 +1,5 @@
+					../../Classes/AppDelegate.cpp \
+					../../Classes/BaseLevel.cpp \
+					../../Classes/Enemy.cpp \
+					../../Classes/HelloWorldScene.cpp \
+					../../Classes/Player.cpp
