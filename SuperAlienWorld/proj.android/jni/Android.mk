@@ -14,7 +14,15 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
 					../../Classes/AppDelegate.cpp \
 					../../Classes/BaseLevel.cpp \
 					../../Classes/Enemy.cpp \
-					../../Classes/HelloWorldScene.cpp \
+					../../Classes/EnemyFactory.cpp \
+					../../Classes/EnemyFrog.cpp \
+					../../Classes/EnemyLadybug.cpp \
+					../../Classes/EnemyMouse.cpp \
+					../../Classes/EnemySlimeBlue.cpp \
+					../../Classes/EnemySlimeGreen.cpp \
+					../../Classes/EnemySlimePurple.cpp \
+					../../Classes/EnemySnail.cpp \
+					../../Classes/EnemyWormGreen.cpp \
 					../../Classes/Player.cpp
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes

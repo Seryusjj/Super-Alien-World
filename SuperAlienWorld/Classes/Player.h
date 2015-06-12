@@ -1,9 +1,9 @@
 #pragma once
-#define PLAYER_CONTACT_MASK 0xFFFFFFFF
-#define PLAYER_TAG 1
+
+
 
 #include "cocos2d.h"
-#include "Enemy.h"
+
 
 class Player : public cocos2d::Sprite
 {
@@ -24,9 +24,10 @@ private:
 	void createJumpAnimation();
 	void physicsSetUp();
 	void controlsSetUp();
+	void initializeVariables();
 
-	void onContactEnemy(Node* node1, Node* node2);
-	void onContactTerrain(Node* node1, Node* node2);
+	bool onContactEnemy(Node* node1, Node* node2);
+	bool onContactTerrain(Node* node1, Node* node2);
 	void jump();
 
 public:
@@ -37,6 +38,7 @@ public:
 public:
 	CC_SYNTHESIZE(float, _speed, Speed);
 	CC_SYNTHESIZE(bool, _grounded, Grouned);
+	CC_SYNTHESIZE(bool, _dead, Dead);
 	Animations getCurrentAnimation(){ return _currentAnimation; };
 	void setCurrentAnimation(Animations newAnimation);
 

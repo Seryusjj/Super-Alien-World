@@ -2,8 +2,6 @@
 
 #include "cocos2d.h"
 
-#define ENEMY_TAG 2
-
 class Enemy : public cocos2d::Sprite
 {
 
@@ -12,8 +10,10 @@ public:
 
 protected:
 	std::string _baseSpriteName;
+	virtual void setEnemyType();
 
 private:
+	
 	bool _behaviourInitialized;
 	Animations _currentAnimation;
 	cocos2d::Size _visibleSize;
@@ -21,6 +21,7 @@ private:
 	cocos2d::SpriteFrame* _deadAnimation;
 
 private:
+	void initializeVariables();
 	void createRunAnimation();
 	void createDeadAnimation();
 	void createBehaviour();
@@ -28,7 +29,7 @@ private:
 
 public:
 	bool onContactBegin(cocos2d::PhysicsContact& contact);
-	void onContactSeperate(cocos2d::PhysicsContact& contact);
+
 
 public:
 	CC_SYNTHESIZE(float, _speed, Speed);

@@ -142,7 +142,15 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y</Command>
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
     <ClCompile Include="..\Classes\BaseLevel.cpp" />
     <ClCompile Include="..\Classes\Enemy.cpp" />
-    <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
+    <ClCompile Include="..\Classes\EnemyFactory.cpp" />
+    <ClCompile Include="..\Classes\EnemyFrog.cpp" />
+    <ClCompile Include="..\Classes\EnemyLadybug.cpp" />
+    <ClCompile Include="..\Classes\EnemyMouse.cpp" />
+    <ClCompile Include="..\Classes\EnemySlimeBlue.cpp" />
+    <ClCompile Include="..\Classes\EnemySlimeGreen.cpp" />
+    <ClCompile Include="..\Classes\EnemySlimePurple.cpp" />
+    <ClCompile Include="..\Classes\EnemySnail.cpp" />
+    <ClCompile Include="..\Classes\EnemyWormGreen.cpp" />
     <ClCompile Include="..\Classes\Player.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
@@ -150,17 +158,23 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y</Command>
     <ClInclude Include="..\Classes\AppDelegate.h" />
     <ClInclude Include="..\Classes\BaseLevel.h" />
     <ClInclude Include="..\Classes\Enemy.h" />
-    <ClInclude Include="..\Classes\HelloWorldScene.h" />
+    <ClInclude Include="..\Classes\EnemyFactory.h" />
+    <ClInclude Include="..\Classes\EnemyFrog.h" />
+    <ClInclude Include="..\Classes\EnemyLadybug.h" />
+    <ClInclude Include="..\Classes\EnemyMouse.h" />
+    <ClInclude Include="..\Classes\EnemySlimeBlue.h" />
+    <ClInclude Include="..\Classes\EnemySlimeGreen.h" />
+    <ClInclude Include="..\Classes\EnemySlimePurple.h" />
+    <ClInclude Include="..\Classes\EnemySnail.h" />
+    <ClInclude Include="..\Classes\EnemyWormGreen.h" />
     <ClInclude Include="..\Classes\Player.h" />
+    <ClInclude Include="..\Classes\Tags.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\cocos2d\cocos\2d\libcocos2d.vcxproj">
       <Project>{98a51ba8-fc3a-415b-ac8f-8c7bd464e93e}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="..\cocos2d\cocos\editor-support\spine\proj.win32\libSpine.vcxproj">
-      <Project>{b7c2a162-dec9-4418-972e-240ab3cbfcae}</Project>
     </ProjectReference>
     <ProjectReference Include="..\cocos2d\external\Box2D\proj.win32\libbox2d.vcxproj">
       <Project>{929480e7-23c0-4df6-8456-096d71547116}</Project>

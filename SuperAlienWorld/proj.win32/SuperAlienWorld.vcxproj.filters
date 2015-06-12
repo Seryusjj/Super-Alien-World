@@ -10,13 +10,16 @@
     <Filter Include="src">
       <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\enemies">
+      <UniqueIdentifier>{47bea3fc-90fb-436d-9486-3020609cc0c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\headers">
+      <UniqueIdentifier>{2a493483-a226-4996-a3c8-fd331adf324c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>win32</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\HelloWorldScene.cpp">
-      <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Player.cpp">
       <Filter>src</Filter>
@@ -27,8 +30,35 @@
     <ClCompile Include="..\Classes\BaseLevel.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\Enemy.cpp">
+    <ClCompile Include="..\Classes\EnemyFactory.cpp">
       <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Enemy.cpp">
+      <Filter>src\enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EnemyFrog.cpp">
+      <Filter>src\enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EnemyLadybug.cpp">
+      <Filter>src\enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EnemyMouse.cpp">
+      <Filter>src\enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EnemySlimeBlue.cpp">
+      <Filter>src\enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EnemySlimeGreen.cpp">
+      <Filter>src\enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EnemySlimePurple.cpp">
+      <Filter>src\enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EnemySnail.cpp">
+      <Filter>src\enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EnemyWormGreen.cpp">
+      <Filter>src\enemies</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -36,19 +66,46 @@
       <Filter>win32</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Enemy.h">
-      <Filter>src</Filter>
+      <Filter>src\headers</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\HelloWorldScene.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Player.h">
-      <Filter>src</Filter>
+    <ClInclude Include="..\Classes\EnemyFrog.h">
+      <Filter>src\headers</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\AppDelegate.h">
-      <Filter>src</Filter>
+      <Filter>src\headers</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\BaseLevel.h">
-      <Filter>src</Filter>
+      <Filter>src\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemyFactory.h">
+      <Filter>src\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Tags.h">
+      <Filter>src\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Player.h">
+      <Filter>src\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemyLadybug.h">
+      <Filter>src\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemyMouse.h">
+      <Filter>src\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemySlimeBlue.h">
+      <Filter>src\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemySlimeGreen.h">
+      <Filter>src\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemySlimePurple.h">
+      <Filter>src\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemySnail.h">
+      <Filter>src\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemyWormGreen.h">
+      <Filter>src\headers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

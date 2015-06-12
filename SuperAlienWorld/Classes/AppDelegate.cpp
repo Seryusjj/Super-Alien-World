@@ -1,5 +1,6 @@
 #include "AppDelegate.h"
-#include "HelloWorldScene.h"
+#include "BaseLevel.h"
+#include "SimpleAudioEngine.h"
 
 USING_NS_CC;
 
@@ -57,7 +58,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 	
 
     // create a scene. it's an autorelease object
-    auto scene = HelloWorld::createScene();
+	auto scene = BaseLevel::createScene();
 
     // run
     director->runWithScene(scene);
@@ -78,5 +79,5 @@ void AppDelegate::applicationWillEnterForeground() {
     Director::getInstance()->startAnimation();
 
     // if you use SimpleAudioEngine, it must resume here
-    // SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
+    CocosDenshion::SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
 }

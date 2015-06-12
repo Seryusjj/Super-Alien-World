@@ -7,7 +7,7 @@
 			<key>frog_dead</key>
 			<dict>
 				<key>frame</key>
-				<string>{{1,175},{110,97}}</string>
+				<string>{{1,110},{110,97}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -20,7 +20,7 @@
 			<key>frog_move</key>
 			<dict>
 				<key>frame</key>
-				<string>{{1,76},{110,97}}</string>
+				<string>{{1,11},{110,97}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -33,7 +33,7 @@
 			<key>snail_move</key>
 			<dict>
 				<key>frame</key>
-				<string>{{1,2},{110,72}}</string>
+				<string>{{113,135},{110,72}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -43,10 +43,10 @@
 				<key>sourceSize</key>
 				<string>{110,72}</string>
 			</dict>
-			<key>ladybug_fly</key>
+			<key>ladybug_dead</key>
 			<dict>
 				<key>frame</key>
-				<string>{{113,196},{105,76}}</string>
+				<string>{{113,57},{105,76}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -59,7 +59,7 @@
 			<key>frog</key>
 			<dict>
 				<key>frame</key>
-				<string>{{113,123},{104,71}}</string>
+				<string>{{225,136},{104,71}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -69,36 +69,10 @@
 				<key>sourceSize</key>
 				<string>{104,71}</string>
 			</dict>
-			<key>snail</key>
-			<dict>
-				<key>frame</key>
-				<string>{{113,49},{100,72}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{0,0},{100,72}}</string>
-				<key>sourceSize</key>
-				<string>{100,72}</string>
-			</dict>
-			<key>wormGreen</key>
-			<dict>
-				<key>frame</key>
-				<string>{{113,5},{116,42}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{0,0},{116,42}}</string>
-				<key>sourceSize</key>
-				<string>{116,42}</string>
-			</dict>
 			<key>ladybug_move</key>
 			<dict>
 				<key>frame</key>
-				<string>{{215,59},{110,62}}</string>
+				<string>{{331,145},{110,62}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -108,23 +82,10 @@
 				<key>sourceSize</key>
 				<string>{110,62}</string>
 			</dict>
-			<key>slimeBlue_move</key>
-			<dict>
-				<key>frame</key>
-				<string>{{231,3},{104,54}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{0,0},{104,54}}</string>
-				<key>sourceSize</key>
-				<string>{104,54}</string>
-			</dict>
 			<key>mouse</key>
 			<dict>
 				<key>frame</key>
-				<string>{{219,131},{107,63}}</string>
+				<string>{{443,144},{107,63}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -137,7 +98,7 @@
 			<key>mouse_dead</key>
 			<dict>
 				<key>frame</key>
-				<string>{{327,66},{107,63}}</string>
+				<string>{{552,144},{107,63}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -147,23 +108,10 @@
 				<key>sourceSize</key>
 				<string>{107,63}</string>
 			</dict>
-			<key>mouse_move</key>
-			<dict>
-				<key>frame</key>
-				<string>{{337,1},{105,63}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{0,0},{105,63}}</string>
-				<key>sourceSize</key>
-				<string>{105,63}</string>
-			</dict>
 			<key>ladybug</key>
 			<dict>
 				<key>frame</key>
-				<string>{{220,210},{106,62}}</string>
+				<string>{{661,145},{106,62}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -173,62 +121,23 @@
 				<key>sourceSize</key>
 				<string>{106,62}</string>
 			</dict>
-			<key>slimeGreen_move</key>
+			<key>mouse_move</key>
 			<dict>
 				<key>frame</key>
-				<string>{{328,218},{104,54}}</string>
+				<string>{{769,144},{105,63}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
-				<string>{{0,0},{104,54}}</string>
+				<string>{{0,0},{105,63}}</string>
 				<key>sourceSize</key>
-				<string>{104,54}</string>
-			</dict>
-			<key>slimePurple_move</key>
-			<dict>
-				<key>frame</key>
-				<string>{{328,162},{104,54}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{0,0},{104,54}}</string>
-				<key>sourceSize</key>
-				<string>{104,54}</string>
-			</dict>
-			<key>slimeBlue_hit</key>
-			<dict>
-				<key>frame</key>
-				<string>{{328,137},{102,23}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{0,0},{102,23}}</string>
-				<key>sourceSize</key>
-				<string>{102,23}</string>
-			</dict>
-			<key>slimeGreen_hit</key>
-			<dict>
-				<key>frame</key>
-				<string>{{432,137},{102,23}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{0,0},{102,23}}</string>
-				<key>sourceSize</key>
-				<string>{102,23}</string>
+				<string>{105,63}</string>
 			</dict>
 			<key>slimeBlue</key>
 			<dict>
 				<key>frame</key>
-				<string>{{436,73},{88,62}}</string>
+				<string>{{876,145},{88,62}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -241,7 +150,7 @@
 			<key>slimeBlue_dead</key>
 			<dict>
 				<key>frame</key>
-				<string>{{444,9},{88,62}}</string>
+				<string>{{876,81},{88,62}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -251,75 +160,36 @@
 				<key>sourceSize</key>
 				<string>{88,62}</string>
 			</dict>
-			<key>slimeGreen</key>
+			<key>slimeBlue_move</key>
 			<dict>
 				<key>frame</key>
-				<string>{{526,73},{88,62}}</string>
+				<string>{{113,1},{104,54}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
-				<string>{{0,0},{88,62}}</string>
+				<string>{{0,0},{104,54}}</string>
 				<key>sourceSize</key>
-				<string>{88,62}</string>
+				<string>{104,54}</string>
 			</dict>
-			<key>slimeGreen_dead</key>
+			<key>slimeGreen_move</key>
 			<dict>
 				<key>frame</key>
-				<string>{{534,9},{88,62}}</string>
+				<string>{{331,89},{104,54}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
-				<string>{{0,0},{88,62}}</string>
+				<string>{{0,0},{104,54}}</string>
 				<key>sourceSize</key>
-				<string>{88,62}</string>
+				<string>{104,54}</string>
 			</dict>
-			<key>slimePurple</key>
+			<key>wormGreen</key>
 			<dict>
 				<key>frame</key>
-				<string>{{616,210},{88,62}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{0,0},{88,62}}</string>
-				<key>sourceSize</key>
-				<string>{88,62}</string>
-			</dict>
-			<key>snail_shell</key>
-			<dict>
-				<key>frame</key>
-				<string>{{536,208},{78,64}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{0,0},{78,64}}</string>
-				<key>sourceSize</key>
-				<string>{78,64}</string>
-			</dict>
-			<key>slimePurple_dead</key>
-			<dict>
-				<key>frame</key>
-				<string>{{434,210},{88,62}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{0,0},{88,62}}</string>
-				<key>sourceSize</key>
-				<string>{88,62}</string>
-			</dict>
-			<key>wormGreen_dead</key>
-			<dict>
-				<key>frame</key>
-				<string>{{434,164},{116,42}}</string>
+				<string>{{437,100},{116,42}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -329,23 +199,62 @@
 				<key>sourceSize</key>
 				<string>{116,42}</string>
 			</dict>
-			<key>slimePurple_hit</key>
+			<key>slimePurple_move</key>
 			<dict>
 				<key>frame</key>
-				<string>{{536,139},{102,23}}</string>
+				<string>{{225,80},{104,54}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
-				<string>{{0,0},{102,23}}</string>
+				<string>{{0,0},{104,54}}</string>
 				<key>sourceSize</key>
-				<string>{102,23}</string>
+				<string>{104,54}</string>
+			</dict>
+			<key>wormGreen_dead</key>
+			<dict>
+				<key>frame</key>
+				<string>{{555,100},{116,42}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{116,42}}</string>
+				<key>sourceSize</key>
+				<string>{116,42}</string>
+			</dict>
+			<key>slimeGreen</key>
+			<dict>
+				<key>frame</key>
+				<string>{{673,81},{88,62}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{88,62}}</string>
+				<key>sourceSize</key>
+				<string>{88,62}</string>
+			</dict>
+			<key>snail</key>
+			<dict>
+				<key>frame</key>
+				<string>{{763,70},{100,72}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{100,72}}</string>
+				<key>sourceSize</key>
+				<string>{100,72}</string>
 			</dict>
 			<key>wormGreen_move</key>
 			<dict>
 				<key>frame</key>
-				<string>{{616,166},{116,42}}</string>
+				<string>{{437,56},{116,42}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -358,7 +267,7 @@
 			<key>wormPink</key>
 			<dict>
 				<key>frame</key>
-				<string>{{616,95},{116,42}}</string>
+				<string>{{555,56},{116,42}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -371,7 +280,7 @@
 			<key>wormPink_dead</key>
 			<dict>
 				<key>frame</key>
-				<string>{{624,51},{116,42}}</string>
+				<string>{{220,36},{116,42}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -381,10 +290,23 @@
 				<key>sourceSize</key>
 				<string>{116,42}</string>
 			</dict>
+			<key>slimeGreen_dead</key>
+			<dict>
+				<key>frame</key>
+				<string>{{338,25},{88,62}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{88,62}}</string>
+				<key>sourceSize</key>
+				<string>{88,62}</string>
+			</dict>
 			<key>wormPink_move</key>
 			<dict>
 				<key>frame</key>
-				<string>{{624,7},{116,42}}</string>
+				<string>{{428,12},{116,42}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -393,6 +315,45 @@
 				<string>{{0,0},{116,42}}</string>
 				<key>sourceSize</key>
 				<string>{116,42}</string>
+			</dict>
+			<key>slimePurple</key>
+			<dict>
+				<key>frame</key>
+				<string>{{673,17},{88,62}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{88,62}}</string>
+				<key>sourceSize</key>
+				<string>{88,62}</string>
+			</dict>
+			<key>slimePurple_dead</key>
+			<dict>
+				<key>frame</key>
+				<string>{{763,6},{88,62}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{88,62}}</string>
+				<key>sourceSize</key>
+				<string>{88,62}</string>
+			</dict>
+			<key>snail_dead</key>
+			<dict>
+				<key>frame</key>
+				<string>{{865,15},{78,64}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{78,64}}</string>
+				<key>sourceSize</key>
+				<string>{78,64}</string>
 			</dict>
 		</dict>
 		<key>metadata</key>

@@ -1,5 +1,6 @@
 #include "Player.h"
-#include "HelloWorldScene.h"
+#include "Enemy.h"
+#include "Tags.h"
 
 USING_NS_CC;
 
@@ -9,11 +10,7 @@ bool Player::init()
 	{
 		return false;
 	}
-	_speed = 180;
-	_visibleSize = Director::getInstance()->getVisibleSize();
-	_grounded = false;
-	setTag(PLAYER_TAG);
-	setSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName("alienGreen_front"));
+	initializeVariables();
 	createRunAnimation();
 	createJumpAnimation();
 	setCurrentAnimation(RUN);
@@ -21,6 +18,15 @@ bool Player::init()
 	physicsSetUp();
 	scheduleUpdate();
 	return true;
+}
+
+void Player::initializeVariables(){
+	_speed = 180;
+	_visibleSize = Director::getInstance()->getVisibleSize();
+	_grounded = false;
+	_dead = false;
+	setTag(PLAYER_TAG);
+	setSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName("alienGreen_front"));
 }
 
 void Player::createRunAnimation()
@@ -92,68 +98,78 @@ void Player::physicsSetUp()
 	//physics body
 	auto playerPhysicsBody = PhysicsBody::createBox(getBoundingBox().size);
 	playerPhysicsBody->setContactTestBitmask(PLAYER_CONTACT_MASK);
-
 	playerPhysicsBody->setRotationEnable(false);
 	setPhysicsBody(playerPhysicsBody);
 }
 
-void Player::onContactTerrain(Node* node1,Node* node2){
+bool Player::onContactTerrain(Node* node1,Node* node2){
 	if (node1->getTag() == PLAYER_TAG && node2->getTag()==GROUND_TAG
-		|| node2->getTag() == PLAYER_TAG && node1->getTag() == GROUND_TAG)
-	{
+		|| node2->getTag() == PLAYER_TAG && node1->getTag() == GROUND_TAG){
+
 		Player * player=nullptr;
-		if (node1->getTag() == PLAYER_TAG)
-		{
+		if (node1->getTag() == PLAYER_TAG){
 			player = dynamic_cast<Player*>(node1);
 		}
-		else
-		{
+		else{
 			player = dynamic_cast<Player*>(node2);
+		}
+		if (player->_dead){
+			return false;
 		}
 		player->_grounded = true;
 		player->getPhysicsBody()->setGravityEnable(false);
 		player->setCurrentAnimation(RUN);
 		player->getPhysicsBody()->setVelocity(Point(0, 0));
 	}
+	return true;
 }
 
-void Player::onContactEnemy(Node* node1, Node* node2){
+bool Player::onContactEnemy(Node* node1, Node* node2){
 	if (node1->getTag() == PLAYER_TAG && node2->getTag() == ENEMY_TAG
-		|| node2->getTag() == PLAYER_TAG && node1->getTag() == ENEMY_TAG)
-	{
+		|| node2->getTag() == PLAYER_TAG && node1->getTag() == ENEMY_TAG){
+
 		Player * player = nullptr;
 		Enemy* enemy = nullptr;
-		if (node1->getTag() == PLAYER_TAG)
-		{
+		if (node1->getTag() == PLAYER_TAG){
 			player = dynamic_cast<Player*>(node1);
 			enemy = dynamic_cast<Enemy*>(node2);
 		}
-		else
-		{
+		else{
 			player = dynamic_cast<Player*>(node2);
 			enemy = dynamic_cast<Enemy*>(node1);
 		}
+
 		if (!player->_grounded && enemy->getCurrentAnimation()!=Enemy::Animations::DEAD){
+			//kill enemy
 			enemy->setCurrentAnimation(Enemy::Animations::DEAD);
 			player->getPhysicsBody()->setVelocity(Point(0, 500));
 			enemy->getPhysicsBody()->setVelocity(Point(0, 400));
 			enemy->setGrouned(false);
 			enemy->getPhysicsBody()->setGravityEnable(true);
 		}
-		else{//kill player}
+		else if (!player->_grounded && enemy->getCurrentAnimation() == Enemy::Animations::DEAD){
+			//no colisiones con el eenemigo, ya esta muerto.
+			return false;
 		}
-
-			
-		
+		else{
+			//kill player
+			player->_dead = true;
+			player->getPhysicsBody()->setVelocity(Point(0, 400));
+			player->getPhysicsBody()->setGravityEnable(true);
+			player->setGrouned(false);
+			//no colisiones con el eenemigo, ya esta muerto el jugador.
+			return false;
+		}	
 	}
+	return true;
 }
 
 bool Player::onContactBegin(PhysicsContact& contact){
 	auto node1 = contact.getShapeA()->getBody()->getNode();
 	auto node2 = contact.getShapeB()->getBody()->getNode();
-	onContactEnemy(node1, node2);
-	onContactTerrain(node1, node2);
-	return true;
+	
+	
+	return onContactEnemy(node1, node2) && onContactTerrain(node1, node2);
 }
 
 void Player::onContactSeperate(PhysicsContact& contact)
@@ -162,12 +178,10 @@ void Player::onContactSeperate(PhysicsContact& contact)
 	auto node2 = contact.getShapeB()->getBody()->getNode();
 	if (node1->getTag() == PLAYER_TAG || node2->getTag() == PLAYER_TAG){
 		Node * player = nullptr;
-		if (node1->getTag() == PLAYER_TAG)
-		{
+		if (node1->getTag() == PLAYER_TAG){
 			player = node1;
 		}
-		else
-		{
+		else{
 			player = node2;
 		}
 		player->getPhysicsBody()->setGravityEnable(true);
@@ -175,13 +189,13 @@ void Player::onContactSeperate(PhysicsContact& contact)
 }
 
 void Player::update(float dt){
-	setPositionX(getPositionX() + dt*_speed);
-
+	if (!_dead){
+		setPositionX(getPositionX() + dt*_speed);
+	}
 }
 
 void Player::jump(){
-	if (_grounded)
-	{
+	if (_grounded){
 		auto body = getPhysicsBody();
 		setCurrentAnimation(JUMP);
 		body->setGravityEnable(true);

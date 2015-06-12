@@ -1,6 +1,5 @@
 #include "Enemy.h"
-#include "Player.h"
-#include "HelloWorldScene.h"
+#include "Tags.h"
 
 
 
@@ -13,19 +12,25 @@ bool Enemy::init()
 	{
 		return false;
 	}
-	setTag(ENEMY_TAG);
-	_speed = 180;
-	_visibleSize = Director::getInstance()->getVisibleSize();
-	_grounded = false;
-	_behaviourInitialized = false;
-	_baseSpriteName = "wormPink";
-	setSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName(_baseSpriteName));
-
+	setEnemyType();
+	initializeVariables();
 	createRunAnimation();
 	createDeadAnimation();
 	setCurrentAnimation(RUN);
 	physicsSetUp();
 	return true;
+}
+void Enemy::initializeVariables(){
+	setTag(ENEMY_TAG);
+	_speed = 180;
+	_visibleSize = Director::getInstance()->getVisibleSize();
+	_grounded = false;
+	_behaviourInitialized = false;
+	setSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName(_baseSpriteName));
+}
+
+void Enemy::setEnemyType(){
+	_baseSpriteName = "wormPink";
 }
 
 void Enemy::createRunAnimation()
@@ -70,7 +75,6 @@ void Enemy::physicsSetUp()
 	//listen to contacts
 	auto contactListener = EventListenerPhysicsContact::create();
 	contactListener->onContactBegin = CC_CALLBACK_1(Enemy::onContactBegin, this);
-	contactListener->onContactSeperate = CC_CALLBACK_1(Enemy::onContactSeperate, this);
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(contactListener, this);
 
 	//physics body
@@ -104,31 +108,10 @@ bool Enemy::onContactBegin(PhysicsContact& contact){
 			enemy->createBehaviour();
 			enemy->_behaviourInitialized = true;
 		}
-		
 	}
 	return true;
 }
 
-void Enemy::onContactSeperate(PhysicsContact& contact)
-{
-	/*auto node1 = contact.getShapeA()->getBody()->getNode();
-	auto node2 = contact.getShapeB()->getBody()->getNode();
-	if (node1->getTag() == ENEMY_TAG || node2->getTag() == ENEMY_TAG){
-		Enemy * enemy = nullptr;
-		if (node1->getTag() == ENEMY_TAG)
-		{
-			enemy = dynamic_cast<Enemy*>(node1);
-		}
-		else
-		{
-			enemy = dynamic_cast<Enemy*>(node2);
-		}
-		if (!enemy->_grounded){
-			enemy->getPhysicsBody()->setGravityEnable(true);
-		}
-		
-	}*/
-}
 
 
 
