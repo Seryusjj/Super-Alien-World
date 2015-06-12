@@ -33,8 +33,8 @@ bool BaseLevel::init()
 }
 
 void BaseLevel::setLevel(){
-	_levelName = "nivel1.tmx";
-	_bgName = "colored_grass.png";
+	_levelName = "nivel3.tmx";
+	_bgName = "colored_shroom.png";
 }
 
 void BaseLevel::initCamera(){
@@ -78,26 +78,29 @@ void BaseLevel::initVariables(){
 
 void BaseLevel::createGround(){
 	auto groundObjLayer = _map->getObjectGroup("ground");
-	ValueMap groundCollider = groundObjLayer->getObject("groundCollider");
-	auto line = groundCollider["polylinePoints"].asValueVector();
+	auto values = groundObjLayer->getObjects();
+	for (int i = 0; i < values.size(); i++){
+		ValueMap groundCollider = values.at(i).asValueMap();
+		auto line = groundCollider["polylinePoints"].asValueVector();
 
-	auto xOffset = groundCollider["x"].asFloat();
-	auto yOffset = groundCollider["y"].asFloat();
+		auto xOffset = groundCollider["x"].asFloat();
+		auto yOffset = groundCollider["y"].asFloat();
 
-	auto lineDrawer = DrawNode::create();
-	for (int i = 0; i < line.size() - 1; i++){
-		auto originValue = line.at(i).asValueMap();
-		auto destinationValue = line.at(i + 1).asValueMap();
-		Point origin(xOffset + originValue["x"].asFloat(), (yOffset - originValue["y"].asFloat()));
-		Point destination(xOffset + destinationValue["x"].asFloat(), (yOffset - destinationValue["y"].asFloat()));
+		auto lineDrawer = DrawNode::create();
+		for (int i = 0; i < line.size() - 1; i++){
+			auto originValue = line.at(i).asValueMap();
+			auto destinationValue = line.at(i + 1).asValueMap();
+			Point origin(xOffset + originValue["x"].asFloat(), (yOffset - originValue["y"].asFloat()));
+			Point destination(xOffset + destinationValue["x"].asFloat(), (yOffset - destinationValue["y"].asFloat()));
 
-		//fisica
-		createPhysicsBodyFromPoints(origin, destination, GROUND_TAG);
+			//fisica
+			createPhysicsBodyFromPoints(origin, destination, GROUND_TAG);
 
-		//debug
-		lineDrawer->drawLine(origin, destination, Color4F::ORANGE);
+			//debug
+			lineDrawer->drawLine(origin, destination, Color4F::ORANGE);
+		}
+		addChild(lineDrawer);
 	}
-	addChild(lineDrawer);
 }
 
 void BaseLevel::createWinningArea(){
@@ -157,7 +160,7 @@ void BaseLevel::createEnemies(){
 }
 
 Point BaseLevel::tileCoordinateToCocosPosition(Size layerSize, Point tileCoordinate){
-	//anchor point 0.5 0.5 -> layerSize.width / 2
+	//anchor point (0.5 0.5) -> layerSize.width / 2
 	float x = floor(layerSize.width / 2 * getScaleX() + tileCoordinate.x * _map->getTileSize().width * getScaleX());
 	//recuerda que el eje Y esta invertido
 	float y = floor(layerSize.height / 2 * getScaleY() + (layerSize.height-tileCoordinate.y) * _map->getTileSize().height * getScaleY());

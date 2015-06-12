@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="7" tilewidth="128" tileheight="128" nextobjectid="34">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="7" tilewidth="128" tileheight="128" nextobjectid="48">
  <tileset firstgid="1" name="spritesheet_ground" tilewidth="128" tileheight="128">
   <image source="spritesheet_ground.png" width="1024" height="2048"/>
  </tileset>
@@ -182,6 +182,12 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="15"/>
+   <tile gid="7"/>
+   <tile gid="7"/>
+   <tile gid="7"/>
+   <tile gid="7"/>
+   <tile gid="126"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -211,26 +217,29 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="102"/>
+   <tile gid="86"/>
    <tile gid="0"/>
+   <tile gid="44"/>
    <tile gid="0"/>
+   <tile gid="102"/>
+   <tile gid="94"/>
+   <tile gid="94"/>
+   <tile gid="86"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="113"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="89"/>
+   <tile gid="23"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="97"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="105"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="15"/>
+   <tile gid="7"/>
+   <tile gid="126"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -254,27 +263,28 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="102"/>
+   <tile gid="94"/>
+   <tile gid="87"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="87"/>
+   <tile gid="87"/>
+   <tile gid="94"/>
+   <tile gid="86"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="113"/>
-   <tile gid="9"/>
-   <tile gid="2"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="2"/>
-   <tile gid="81"/>
-   <tile gid="105"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -289,64 +299,54 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="94"/>
+   <tile gid="94"/>
+   <tile gid="94"/>
+   <tile gid="94"/>
+   <tile gid="94"/>
+   <tile gid="94"/>
+   <tile gid="94"/>
+   <tile gid="94"/>
+   <tile gid="94"/>
+   <tile gid="94"/>
+   <tile gid="94"/>
+   <tile gid="94"/>
+   <tile gid="87"/>
+   <tile gid="87"/>
+   <tile gid="87"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="73"/>
-   <tile gid="2"/>
-   <tile gid="2"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="2"/>
-   <tile gid="2"/>
-   <tile gid="81"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
+   <tile gid="87"/>
+   <tile gid="87"/>
+   <tile gid="87"/>
+   <tile gid="87"/>
+   <tile gid="94"/>
+   <tile gid="94"/>
+   <tile gid="94"/>
+   <tile gid="94"/>
+   <tile gid="94"/>
+   <tile gid="94"/>
+   <tile gid="94"/>
+   <tile gid="94"/>
+   <tile gid="94"/>
+   <tile gid="94"/>
+   <tile gid="94"/>
+   <tile gid="94"/>
+   <tile gid="94"/>
+   <tile gid="94"/>
+   <tile gid="94"/>
+   <tile gid="94"/>
+   <tile gid="94"/>
+   <tile gid="94"/>
+   <tile gid="94"/>
+   <tile gid="94"/>
+   <tile gid="94"/>
+   <tile gid="94"/>
+   <tile gid="94"/>
   </data>
  </layer>
  <layer name="sueloAdornos" width="48" height="7">
@@ -479,6 +479,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="187"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -508,9 +509,8 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="187"/>
    <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="139"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -530,6 +530,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="195"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -555,13 +556,10 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="172"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="133"/>
-   <tile gid="133"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -593,14 +591,33 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="171"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="187"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="244"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="195"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="154"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="187"/>
    <tile gid="0"/>
@@ -612,24 +629,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="236"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="244"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="187"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="195"/>
    <tile gid="189"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -654,12 +654,12 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="130"/>
-   <tile gid="130"/>
-   <tile gid="130"/>
-   <tile gid="130"/>
-   <tile gid="130"/>
-   <tile gid="130"/>
+   <tile gid="140"/>
+   <tile gid="140"/>
+   <tile gid="140"/>
+   <tile gid="140"/>
+   <tile gid="140"/>
+   <tile gid="140"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -690,12 +690,29 @@
   </data>
  </layer>
  <objectgroup name="ground">
-  <object id="29" name="groundCollider" x="6" y="762">
-   <polyline points="0,0 1532,4 1530,-124 1656,-124 1654,-252 2934,-252 2934,-126 3060,-126 3062,2 6134,2 6136,20 3050,14 3048,-112 2922,-112 2922,-242 1668,-238 1672.67,-106 1547.33,-108.667 1550,20 -4,20 -2,2"/>
+  <object id="35" x="0" y="765.333">
+   <polyline points="0,0 1532,2.66667 1533.33,-125.333 1788,-125.333 1790.67,-253.333 2041.33,-252 2048,-248 2049.33,-240 1800,-241.333 1798.67,-114.667 1541.33,-116 1542.67,14.6667 1.33333,10.6667 4,0"/>
+  </object>
+  <object id="38" x="2214" y="510.667">
+   <polyline points="0,0 49,0 48.4897,12 1.02083,13.3333 1.53125,-1.33333"/>
+  </object>
+  <object id="40" x="2427" y="510.667">
+   <polyline points="29,1 513.843,2.66667 512.509,126.667 768.763,129.333 770.097,256 3692.99,257.333 3694.34,270.667 762.089,264 763.425,136 503.166,134.667 504.501,10.6667 25.996,12.3333 26.3347,1.66667"/>
+  </object>
+  <object id="45" x="4492" y="522.667">
+   <polyline points="-68,6 224,6 228,-10 -90,-8 -90,12"/>
+  </object>
+  <object id="46" x="3464.67" y="389.333">
+   <polyline points="18,-4 746,0 746,14 16,8 16,2"/>
+  </object>
+  <object id="47" x="3340" y="516">
+   <polyline points="0,0 110,0 110,10 0,12 0,0"/>
   </object>
  </objectgroup>
  <layer name="winning" width="48" height="7">
   <data>
+   <tile gid="0"/>
+   <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -1030,13 +1047,11 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
   </data>
  </layer>
  <objectgroup name="winning">
   <object id="31" name="door" x="5247" y="766">
-   <polyline points="0,0 1,-204 130,-206 129,0 1,0"/>
+   <polyline points="257,3 258,-201 387,-203 386,3 258,3"/>
   </object>
  </objectgroup>
  <layer name="enemies" width="48" height="7">
@@ -1167,6 +1182,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="257"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -1202,10 +1218,10 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="265"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="262"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -1289,8 +1305,8 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="262"/>
    <tile gid="0"/>
-   <tile gid="266"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -1307,11 +1323,10 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="263"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="259"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="262"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -1321,7 +1336,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="265"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>

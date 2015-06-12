@@ -96,10 +96,13 @@ void Player::physicsSetUp()
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(contactListener, this);
 
 	//physics body
-	auto playerPhysicsBody = PhysicsBody::createBox(getBoundingBox().size);
+	auto playerPhysicsBody = PhysicsBody::createBox(Size(getBoundingBox().size.width, getBoundingBox().size.height*0.3));
+
+	playerPhysicsBody->setPositionOffset(Point(0, -getBoundingBox().size.height*0.3 ));
 	playerPhysicsBody->setContactTestBitmask(PLAYER_CONTACT_MASK);
 	playerPhysicsBody->setRotationEnable(false);
 	setPhysicsBody(playerPhysicsBody);
+	
 }
 
 bool Player::onContactTerrain(Node* node1,Node* node2){
@@ -157,7 +160,7 @@ bool Player::onContactEnemy(Node* node1, Node* node2){
 			player->getPhysicsBody()->setVelocity(Point(0, 400));
 			player->getPhysicsBody()->setGravityEnable(true);
 			player->setGrouned(false);
-			//no colisiones con el eenemigo, ya esta muerto el jugador.
+			//no colisiones con el enemigo, ya esta muerto el jugador.
 			return false;
 		}	
 	}
@@ -191,6 +194,9 @@ void Player::onContactSeperate(PhysicsContact& contact)
 void Player::update(float dt){
 	if (!_dead){
 		setPositionX(getPositionX() + dt*_speed);
+		if (getPositionY() <= 100){
+			_dead = true;
+		}
 	}
 }
 
