@@ -17,7 +17,25 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\AppDelegate.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\HelloWorldScene.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\BackGround3Parts.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\BaseLevel.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\BaseMenuLayer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Enemy.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\EnemyFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\EnemyFrog.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\EnemyLadybug.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\EnemyMouse.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\EnemySlimeBlue.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\EnemySlimeGreen.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\EnemySlimePurple.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\EnemySnail.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\EnemyWormGreen.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\GameManager.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Level2.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Level3.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\MainMenuLayer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Player.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\SelectMenuLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)App.xaml.cpp">
       <DependentUpon>$(MSBuildThisFileDirectory)App.xaml</DependentUpon>
     </ClCompile>
@@ -27,8 +45,26 @@
       <DependentUpon>$(MSBuildThisFileDirectory)OpenGLESPage.xaml</DependentUpon>
     </ClCompile>
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\AppDelegate.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\AppMacros.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\HelloWorldScene.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\BackGround3Parts.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\BaseLevel.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\BaseMenuLayer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Enemy.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\EnemyFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\EnemyFrog.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\EnemyLadybug.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\EnemyMouse.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\EnemySlimeBlue.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\EnemySlimeGreen.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\EnemySlimePurple.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\EnemySnail.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\EnemyWormGreen.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\GameManager.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Level2.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Level3.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\MainMenuLayer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Player.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\SelectMenuLayer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Tags.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)App.xaml.h">
       <DependentUpon>$(MSBuildThisFileDirectory)App.xaml</DependentUpon>
     </ClInclude>

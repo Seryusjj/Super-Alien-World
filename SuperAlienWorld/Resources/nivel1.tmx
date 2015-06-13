@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="7" tilewidth="128" tileheight="128" nextobjectid="34">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="7" tilewidth="128" tileheight="128" nextobjectid="46">
  <tileset firstgid="1" name="spritesheet_ground" tilewidth="128" tileheight="128">
   <image source="spritesheet_ground.png" width="1024" height="2048"/>
  </tileset>
@@ -690,8 +690,20 @@
   </data>
  </layer>
  <objectgroup name="ground">
-  <object id="29" name="groundCollider" x="6" y="762">
-   <polyline points="0,0 1532,4 1530,-124 1656,-124 1654,-252 2934,-252 2934,-126 3060,-126 3062,2 6134,2 6136,20 3050,14 3048,-112 2922,-112 2922,-242 1668,-238 1672.67,-106 1547.33,-108.667 1550,20 -4,20 -2,2"/>
+  <object id="34" x="0" y="762">
+   <polyline points="0,10 1548,11 1550,14"/>
+  </object>
+  <object id="35" x="1538" y="636">
+   <polyline points="-2,3 138,4"/>
+  </object>
+  <object id="36" x="1668" y="506">
+   <polyline points="4,8 1261,6"/>
+  </object>
+  <object id="37" x="2932" y="632">
+   <polyline points="-6,6 130,8"/>
+  </object>
+  <object id="38" x="3074" y="760">
+   <polyline points="5,7 3062,4 3062,6"/>
   </object>
  </objectgroup>
  <layer name="winning" width="48" height="7">
@@ -1379,4 +1391,24 @@
    <tile gid="0"/>
   </data>
  </layer>
+ <objectgroup name="wall">
+  <object id="39" x="1538" y="765">
+   <polyline points="0,0 2,-120"/>
+  </object>
+  <object id="40" x="1667" y="638">
+   <polyline points="0,0 -2,-108 1,-119"/>
+  </object>
+  <object id="41" x="2938" y="521">
+   <polyline points="2,-3 1,116"/>
+  </object>
+  <object id="42" x="3065" y="647">
+   <polyline points="0,0 2,115"/>
+  </object>
+  <object id="44" x="1547" y="643">
+   <polyline points="0,0 0,122"/>
+  </object>
+  <object id="45" x="1674" y="522">
+   <polyline points="0,0 3,116"/>
+  </object>
+ </objectgroup>
 </map>

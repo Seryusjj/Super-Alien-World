@@ -5,3 +5,4 @@
 #define WINNING_AREA 1
 #define PLAYER_TAG 2
 #define ENEMY_TAG 3
+#define WALL_TAG 4

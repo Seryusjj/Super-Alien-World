@@ -12,7 +12,9 @@ LOCAL_MODULE_FILENAME := libcocos2dcpp
 
 LOCAL_SRC_FILES := hellocpp/main.cpp \
 					../../Classes/AppDelegate.cpp \
+					../../Classes/BackGround3Parts.cpp \
 					../../Classes/BaseLevel.cpp \
+					../../Classes/BaseMenuLayer.cpp \
 					../../Classes/Enemy.cpp \
 					../../Classes/EnemyFactory.cpp \
 					../../Classes/EnemyFrog.cpp \
@@ -23,7 +25,12 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
 					../../Classes/EnemySlimePurple.cpp \
 					../../Classes/EnemySnail.cpp \
 					../../Classes/EnemyWormGreen.cpp \
-					../../Classes/Player.cpp
+					../../Classes/GameManager.cpp \
+					../../Classes/Level2.cpp \
+					../../Classes/Level3.cpp \
+					../../Classes/MainMenuLayer.cpp \
+					../../Classes/Player.cpp \
+					../../Classes/SelectMenuLayer.cpp
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes
 

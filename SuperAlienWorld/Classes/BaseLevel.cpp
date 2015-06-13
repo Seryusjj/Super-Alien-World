@@ -2,6 +2,9 @@
 #include "Player.h"
 #include "EnemyFactory.h"
 #include "Tags.h"
+#include "GameManager.h"
+#include "SelectMenuLayer.h"
+#include "MainMenuLayer.h"
 
 
 USING_NS_CC;
@@ -26,15 +29,35 @@ bool BaseLevel::init()
 	setLevel();
 	initVariables();
 	createGround();
+	createWall();
 	createWinningArea();
 	createEnemies();
 	scheduleUpdate();
+	createRespawnButton();
+	createBackButton();
 	return true;
 }
 
+void BaseLevel::createBackButton(){
+	SpriteFrameCache::getInstance()->addSpriteFramesWithFile("mainMenu.plist", "mainMenu.png");
+	_backBt = ui::Button::create("back0", "back1", "back1", ui::Widget::TextureResType::PLIST);
+	_backBt->setAnchorPoint(Point(0, 0.5));
+	_backBt->setVisible(false);
+	_backBt->setEnabled(false);
+	_backBt->setScale(2);
+	_backBt->addClickEventListener(CC_CALLBACK_0(BaseLevel::actionButtonBack, this));
+	addChild(_backBt);
+}
+
+void BaseLevel::actionButtonBack(){
+	Director::getInstance()->replaceScene(TransitionFlipX::create(1, MainMenuLayer::createScene()));
+}
+
 void BaseLevel::setLevel(){
-	_levelName = "nivel3.tmx";
-	_bgName = "colored_shroom.png";
+	setTag(1);//level1
+	
+	_levelName = "nivel1.tmx";
+	_bgName = "colored_grass.png";
 }
 
 void BaseLevel::initCamera(){
@@ -76,6 +99,35 @@ void BaseLevel::initVariables(){
 	initCamera();
 }
 
+void BaseLevel::createWall(){
+	auto groundObjLayer = _map->getObjectGroup("wall");
+	auto values = groundObjLayer->getObjects();
+	for (int i = 0; i < values.size(); i++){
+		ValueMap groundCollider = values.at(i).asValueMap();
+		auto line = groundCollider["polylinePoints"].asValueVector();
+
+		auto xOffset = groundCollider["x"].asFloat();
+		auto yOffset = groundCollider["y"].asFloat();
+
+		//auto lineDrawer = DrawNode::create();
+		for (int i = 0; i < line.size() - 1; i++){
+			auto originValue = line.at(i).asValueMap();
+			auto destinationValue = line.at(i + 1).asValueMap();
+			Point origin(xOffset + originValue["x"].asFloat(), (yOffset - originValue["y"].asFloat()));
+			Point destination(xOffset + destinationValue["x"].asFloat(), (yOffset - destinationValue["y"].asFloat()));
+
+			//fisica
+			createPhysicsBodyFromPoints(origin, destination, WALL_TAG);
+
+			//debug
+			//lineDrawer->drawLine(origin, destination, Color4F::ORANGE);
+		}
+		//addChild(lineDrawer);
+	}
+
+}
+
+
 void BaseLevel::createGround(){
 	auto groundObjLayer = _map->getObjectGroup("ground");
 	auto values = groundObjLayer->getObjects();
@@ -86,7 +138,7 @@ void BaseLevel::createGround(){
 		auto xOffset = groundCollider["x"].asFloat();
 		auto yOffset = groundCollider["y"].asFloat();
 
-		auto lineDrawer = DrawNode::create();
+		//auto lineDrawer = DrawNode::create();
 		for (int i = 0; i < line.size() - 1; i++){
 			auto originValue = line.at(i).asValueMap();
 			auto destinationValue = line.at(i + 1).asValueMap();
@@ -97,9 +149,9 @@ void BaseLevel::createGround(){
 			createPhysicsBodyFromPoints(origin, destination, GROUND_TAG);
 
 			//debug
-			lineDrawer->drawLine(origin, destination, Color4F::ORANGE);
+			//lineDrawer->drawLine(origin, destination, Color4F::ORANGE);
 		}
-		addChild(lineDrawer);
+		//addChild(lineDrawer);
 	}
 }
 
@@ -111,7 +163,7 @@ void BaseLevel::createWinningArea(){
 	auto xOffset = door["x"].asFloat();
 	auto yOffset = door["y"].asFloat();
 
-	auto lineDrawer = DrawNode::create();
+	//auto lineDrawer = DrawNode::create();
 	for (int i = 0; i < line.size() - 1; i++){
 		auto originValue = line.at(i).asValueMap();
 		auto destinationValue = line.at(i + 1).asValueMap();
@@ -120,9 +172,9 @@ void BaseLevel::createWinningArea(){
 		//fisica
 		createPhysicsBodyFromPoints(origin, destination, WINNING_AREA);
 		//debug
-		lineDrawer->drawLine(origin, destination, Color4F::ORANGE);
+		//lineDrawer->drawLine(origin, destination, Color4F::ORANGE);
 	}
-	addChild(lineDrawer);
+	//addChild(lineDrawer);
 }
 
 void BaseLevel::createPhysicsBodyFromPoints(cocos2d::Point& origin, cocos2d::Point& destination, int tag){
@@ -173,4 +225,54 @@ Point BaseLevel::tileCoordinateToCocosPosition(Size layerSize, Point tileCoordin
 void BaseLevel::update(float dt)
 {
 	_cameraTarget->setPositionX(_player->getPositionX());
+	if (_player->_winner){
+		levelCompleteActions();
+		unscheduleUpdate();
+	}
+	else if (_player->_dead){
+		//launch respawn button
+		_respawnButton->setPosition(Point(_player->getPositionX(), _visibleSize.height*0.5));
+		_respawnButton->setVisible(true);
+		_respawnButton->setEnabled(true);
+		_backBt->setPosition(Point(_player->getPositionX() - _visibleSize.width*0.45, 50 * getScaleY()));
+		_backBt->setEnabled(true);
+		_backBt->setVisible(true);
+	}
+}
+
+void BaseLevel::createRespawnButton()
+{
+	_respawnButton = ui::Button::create("respawn0.png", "respawn1.png", "respawn1.png");
+	_respawnButton->setScale(0.5);
+	_respawnButton->setPosition(Point(_player->getPositionX(), _visibleSize.height*0.5));
+	_respawnButton->setVisible(false);
+	_respawnButton->setEnabled(false);
+	_respawnButton->addClickEventListener(CC_CALLBACK_0(BaseLevel::respawnButtonAction, this));
+	addChild(_respawnButton);
+}
+
+void BaseLevel::respawnButtonAction(){
+	Director::getInstance()->replaceScene(BaseLevel::createScene());
+}
+
+
+void BaseLevel::levelCompleteActions(){
+		float aniTime = 2.0f;
+		auto winnerLabel = Label::createWithTTF("Level completed", "fonts/arial.ttf", 100);
+		winnerLabel->setTextColor(Color4B::ORANGE);
+		winnerLabel->setPosition(Point(_player->getPositionX(), _visibleSize.height - 100 * getScaleY()));
+		addChild(winnerLabel);
+		GameManager::getInstance()->saveGame(getTag());
+
+		auto moveTo = MoveTo::create(aniTime, Point(_player->getPositionX(), _visibleSize.height *0.5));
+		winnerLabel->runAction(moveTo);
+
+		CallFunc *loadMenu = CallFunc::create(CC_CALLBACK_0(BaseLevel::levelCompleteActionsHelper, this));
+		DelayTime *delayAction = DelayTime::create(aniTime);
+		auto sequence = Sequence::create(delayAction, loadMenu, NULL);
+		runAction(sequence);
+}
+
+void BaseLevel::levelCompleteActionsHelper(){
+	Director::getInstance()->replaceScene(SelectMenuLayer::createScene());
 }

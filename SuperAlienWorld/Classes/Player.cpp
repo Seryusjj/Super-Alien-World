@@ -22,6 +22,7 @@ bool Player::init()
 
 void Player::initializeVariables(){
 	_speed = 180;
+	_winner = false;
 	_visibleSize = Director::getInstance()->getVisibleSize();
 	_grounded = false;
 	_dead = false;
@@ -98,18 +99,34 @@ void Player::physicsSetUp()
 	//physics body
 	auto playerPhysicsBody = PhysicsBody::createBox(Size(getBoundingBox().size.width, getBoundingBox().size.height*0.3));
 
-	playerPhysicsBody->setPositionOffset(Point(0, -getBoundingBox().size.height*0.3 ));
+	playerPhysicsBody->setPositionOffset(Point(0, -getBoundingBox().size.height*0.3));
 	playerPhysicsBody->setContactTestBitmask(PLAYER_CONTACT_MASK);
 	playerPhysicsBody->setRotationEnable(false);
 	setPhysicsBody(playerPhysicsBody);
-	
+
 }
 
-bool Player::onContactTerrain(Node* node1,Node* node2){
-	if (node1->getTag() == PLAYER_TAG && node2->getTag()==GROUND_TAG
+void Player::onContactWall(Node* node1, Node* node2){
+	if (node1->getTag() == PLAYER_TAG && node2->getTag() == WALL_TAG
+		|| node2->getTag() == PLAYER_TAG && node1->getTag() == WALL_TAG){
+
+		Player * player = nullptr;
+		if (node1->getTag() == PLAYER_TAG){
+			player = dynamic_cast<Player*>(node1);
+		}
+		else{
+			player = dynamic_cast<Player*>(node2);
+		}
+		player->getPhysicsBody()->setVelocity(Point(-400, 800));
+	}
+
+}
+
+bool Player::onContactTerrain(Node* node1, Node* node2){
+	if (node1->getTag() == PLAYER_TAG && node2->getTag() == GROUND_TAG
 		|| node2->getTag() == PLAYER_TAG && node1->getTag() == GROUND_TAG){
 
-		Player * player=nullptr;
+		Player * player = nullptr;
 		if (node1->getTag() == PLAYER_TAG){
 			player = dynamic_cast<Player*>(node1);
 		}
@@ -119,12 +136,32 @@ bool Player::onContactTerrain(Node* node1,Node* node2){
 		if (player->_dead){
 			return false;
 		}
+		if (player->_winner){
+			player->_grounded = true;
+			player->getPhysicsBody()->setGravityEnable(false);
+			player->getPhysicsBody()->setVelocity(Point(0, 0));
+			return true;
+		}
 		player->_grounded = true;
 		player->getPhysicsBody()->setGravityEnable(false);
 		player->setCurrentAnimation(RUN);
 		player->getPhysicsBody()->setVelocity(Point(0, 0));
 	}
 	return true;
+}
+
+void Player::onContactWinningArea(Node* node1, Node* node2){
+	if (node1->getTag() == PLAYER_TAG && node2->getTag() == WINNING_AREA
+		|| node2->getTag() == PLAYER_TAG && node1->getTag() == WINNING_AREA){
+		Player* player = nullptr;
+		if (node1->getTag() == PLAYER_TAG){
+			player = dynamic_cast<Player*>(node1);
+		}
+		else{
+			player = dynamic_cast<Player*>(node2);
+		}
+		player->_winner=true;
+	}
 }
 
 bool Player::onContactEnemy(Node* node1, Node* node2){
@@ -142,7 +179,7 @@ bool Player::onContactEnemy(Node* node1, Node* node2){
 			enemy = dynamic_cast<Enemy*>(node1);
 		}
 
-		if (!player->_grounded && enemy->getCurrentAnimation()!=Enemy::Animations::DEAD){
+		if (!player->_grounded && enemy->getCurrentAnimation() != Enemy::Animations::DEAD){
 			//kill enemy
 			enemy->setCurrentAnimation(Enemy::Animations::DEAD);
 			player->getPhysicsBody()->setVelocity(Point(0, 500));
@@ -154,15 +191,15 @@ bool Player::onContactEnemy(Node* node1, Node* node2){
 			//no colisiones con el eenemigo, ya esta muerto.
 			return false;
 		}
-		else{
+		else if (enemy->getCurrentAnimation() != Enemy::Animations::DEAD){
 			//kill player
 			player->_dead = true;
 			player->getPhysicsBody()->setVelocity(Point(0, 400));
 			player->getPhysicsBody()->setGravityEnable(true);
-			player->setGrouned(false);
+			player->_grounded = false;
 			//no colisiones con el enemigo, ya esta muerto el jugador.
 			return false;
-		}	
+		}
 	}
 	return true;
 }
@@ -170,8 +207,8 @@ bool Player::onContactEnemy(Node* node1, Node* node2){
 bool Player::onContactBegin(PhysicsContact& contact){
 	auto node1 = contact.getShapeA()->getBody()->getNode();
 	auto node2 = contact.getShapeB()->getBody()->getNode();
-	
-	
+	onContactWinningArea(node1, node2);
+	onContactWall(node1, node2);
 	return onContactEnemy(node1, node2) && onContactTerrain(node1, node2);
 }
 
@@ -197,6 +234,11 @@ void Player::update(float dt){
 		if (getPositionY() <= 100){
 			_dead = true;
 		}
+	}
+	if (_winner){
+		stopAllActions();
+		setSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName("alienGreen_front"));
+		unscheduleUpdate();
 	}
 }
 

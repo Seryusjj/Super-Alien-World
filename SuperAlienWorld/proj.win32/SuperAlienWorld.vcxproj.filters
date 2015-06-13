@@ -16,6 +16,9 @@
     <Filter Include="src\headers">
       <UniqueIdentifier>{2a493483-a226-4996-a3c8-fd331adf324c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\menus">
+      <UniqueIdentifier>{84e69cf6-c76b-44eb-b6cc-dac4f8e88e09}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -59,6 +62,27 @@
     </ClCompile>
     <ClCompile Include="..\Classes\EnemyWormGreen.cpp">
       <Filter>src\enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BackGround3Parts.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GameManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BaseMenuLayer.cpp">
+      <Filter>src\menus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MainMenuLayer.cpp">
+      <Filter>src\menus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SelectMenuLayer.cpp">
+      <Filter>src\menus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Level2.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Level3.cpp">
+      <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -105,6 +129,27 @@
       <Filter>src\headers</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\EnemyWormGreen.h">
+      <Filter>src\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BaseMenuLayer.h">
+      <Filter>src\menus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MainMenuLayer.h">
+      <Filter>src\menus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SelectMenuLayer.h">
+      <Filter>src\menus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Level3.h">
+      <Filter>src\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Level2.h">
+      <Filter>src\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BackGround3Parts.h">
+      <Filter>src\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameManager.h">
       <Filter>src\headers</Filter>
     </ClInclude>
   </ItemGroup>

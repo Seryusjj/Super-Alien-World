@@ -1,5 +1,7 @@
 					../../Classes/AppDelegate.cpp \
+					../../Classes/BackGround3Parts.cpp \
 					../../Classes/BaseLevel.cpp \
+					../../Classes/BaseMenuLayer.cpp \
 					../../Classes/Enemy.cpp \
 					../../Classes/EnemyFactory.cpp \
 					../../Classes/EnemyFrog.cpp \
@@ -10,4 +12,9 @@
 					../../Classes/EnemySlimePurple.cpp \
 					../../Classes/EnemySnail.cpp \
 					../../Classes/EnemyWormGreen.cpp \
-					../../Classes/Player.cpp
+					../../Classes/GameManager.cpp \
+					../../Classes/Level2.cpp \
+					../../Classes/Level3.cpp \
+					../../Classes/MainMenuLayer.cpp \
+					../../Classes/Player.cpp \
+					../../Classes/SelectMenuLayer.cpp

@@ -140,7 +140,9 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y</Command>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
+    <ClCompile Include="..\Classes\BackGround3Parts.cpp" />
     <ClCompile Include="..\Classes\BaseLevel.cpp" />
+    <ClCompile Include="..\Classes\BaseMenuLayer.cpp" />
     <ClCompile Include="..\Classes\Enemy.cpp" />
     <ClCompile Include="..\Classes\EnemyFactory.cpp" />
     <ClCompile Include="..\Classes\EnemyFrog.cpp" />
@@ -151,12 +153,19 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y</Command>
     <ClCompile Include="..\Classes\EnemySlimePurple.cpp" />
     <ClCompile Include="..\Classes\EnemySnail.cpp" />
     <ClCompile Include="..\Classes\EnemyWormGreen.cpp" />
+    <ClCompile Include="..\Classes\GameManager.cpp" />
+    <ClCompile Include="..\Classes\Level2.cpp" />
+    <ClCompile Include="..\Classes\Level3.cpp" />
+    <ClCompile Include="..\Classes\MainMenuLayer.cpp" />
     <ClCompile Include="..\Classes\Player.cpp" />
+    <ClCompile Include="..\Classes\SelectMenuLayer.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h" />
+    <ClInclude Include="..\Classes\BackGround3Parts.h" />
     <ClInclude Include="..\Classes\BaseLevel.h" />
+    <ClInclude Include="..\Classes\BaseMenuLayer.h" />
     <ClInclude Include="..\Classes\Enemy.h" />
     <ClInclude Include="..\Classes\EnemyFactory.h" />
     <ClInclude Include="..\Classes\EnemyFrog.h" />
@@ -167,7 +176,12 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y</Command>
     <ClInclude Include="..\Classes\EnemySlimePurple.h" />
     <ClInclude Include="..\Classes\EnemySnail.h" />
     <ClInclude Include="..\Classes\EnemyWormGreen.h" />
+    <ClInclude Include="..\Classes\GameManager.h" />
+    <ClInclude Include="..\Classes\Level2.h" />
+    <ClInclude Include="..\Classes\Level3.h" />
+    <ClInclude Include="..\Classes\MainMenuLayer.h" />
     <ClInclude Include="..\Classes\Player.h" />
+    <ClInclude Include="..\Classes\SelectMenuLayer.h" />
     <ClInclude Include="..\Classes\Tags.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>

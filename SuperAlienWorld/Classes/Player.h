@@ -8,9 +8,12 @@
 class Player : public cocos2d::Sprite
 {
 public:
+	bool _winner;
+	bool _dead;
 	enum Animations { JUMP, RUN };
 
 private:
+	bool _grounded;
 	std::ostringstream _ostr;
 	Animations _currentAnimation;
 
@@ -27,6 +30,8 @@ private:
 	void initializeVariables();
 
 	bool onContactEnemy(Node* node1, Node* node2);
+	void onContactWall(Node* node1, Node* node2);
+	void onContactWinningArea(Node* node1, Node* node2);
 	bool onContactTerrain(Node* node1, Node* node2);
 	void jump();
 
@@ -36,9 +41,7 @@ public:
 	bool onContactBegin(cocos2d::PhysicsContact& contact);
 
 public:
-	CC_SYNTHESIZE(float, _speed, Speed);
-	CC_SYNTHESIZE(bool, _grounded, Grouned);
-	CC_SYNTHESIZE(bool, _dead, Dead);
+	CC_SYNTHESIZE(float, _speed, Speed);	
 	Animations getCurrentAnimation(){ return _currentAnimation; };
 	void setCurrentAnimation(Animations newAnimation);
 

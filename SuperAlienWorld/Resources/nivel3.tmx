@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="7" tilewidth="128" tileheight="128" nextobjectid="48">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="7" tilewidth="128" tileheight="128" nextobjectid="70">
  <tileset firstgid="1" name="spritesheet_ground" tilewidth="128" tileheight="128">
   <image source="spritesheet_ground.png" width="1024" height="2048"/>
  </tileset>
@@ -690,23 +690,35 @@
   </data>
  </layer>
  <objectgroup name="ground">
-  <object id="35" x="0" y="765.333">
-   <polyline points="0,0 1532,2.66667 1533.33,-125.333 1788,-125.333 1790.67,-253.333 2041.33,-252 2048,-248 2049.33,-240 1800,-241.333 1798.67,-114.667 1541.33,-116 1542.67,14.6667 1.33333,10.6667 4,0"/>
-  </object>
   <object id="38" x="2214" y="510.667">
    <polyline points="0,0 49,0 48.4897,12 1.02083,13.3333 1.53125,-1.33333"/>
   </object>
-  <object id="40" x="2427" y="510.667">
-   <polyline points="29,1 513.843,2.66667 512.509,126.667 768.763,129.333 770.097,256 3692.99,257.333 3694.34,270.667 762.089,264 763.425,136 503.166,134.667 504.501,10.6667 25.996,12.3333 26.3347,1.66667"/>
+  <object id="48" x="0" y="768">
+   <polyline points="0,0 1537.33,2.66667"/>
   </object>
-  <object id="45" x="4492" y="522.667">
-   <polyline points="-68,6 224,6 228,-10 -90,-8 -90,12"/>
+  <object id="49" x="1540" y="644">
+   <polyline points="0,0 252,-1.33333"/>
   </object>
-  <object id="46" x="3464.67" y="389.333">
-   <polyline points="18,-4 746,0 746,14 16,8 16,2"/>
+  <object id="51" x="1797.33" y="516">
+   <polyline points="0,0 241.333,0"/>
   </object>
-  <object id="47" x="3340" y="516">
-   <polyline points="0,0 110,0 110,10 0,12 0,0"/>
+  <object id="52" x="2444" y="516">
+   <polyline points="0,0 488,0"/>
+  </object>
+  <object id="54" x="2941.33" y="644">
+   <polyline points="0,0 244,0"/>
+  </object>
+  <object id="55" x="3190.67" y="772">
+   <polyline points="0,0 2950.67,-2.66667"/>
+  </object>
+  <object id="56" x="3333.33" y="516">
+   <polyline points="-1.33333,-1.13687e-13 109.333,0"/>
+  </object>
+  <object id="57" x="3462.67" y="385.333">
+   <polyline points="0,0 746.667,2.66667"/>
+  </object>
+  <object id="61" x="4360" y="514.667">
+   <polyline points="0,0 360,0"/>
   </object>
  </objectgroup>
  <layer name="winning" width="48" height="7">
@@ -1394,4 +1406,18 @@
    <tile gid="0"/>
   </data>
  </layer>
+ <objectgroup name="wall">
+  <object id="62" x="1540" y="777">
+   <polyline points="0,0 -1.33333,-127"/>
+  </object>
+  <object id="63" x="1796" y="636">
+   <polyline points="0,0 0,-112"/>
+  </object>
+  <object id="66" x="1549" y="761">
+   <polyline points="0,0 -2,-107"/>
+  </object>
+  <object id="67" x="1804" y="627">
+   <polyline points="0,0 0,-102"/>
+  </object>
+ </objectgroup>
 </map>
