@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="7" tilewidth="128" tileheight="128" nextobjectid="70">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="7" tilewidth="128" tileheight="128" nextobjectid="71">
  <tileset firstgid="1" name="spritesheet_ground" tilewidth="128" tileheight="128">
   <image source="spritesheet_ground.png" width="1024" height="2048"/>
  </tileset>
@@ -691,13 +691,13 @@
  </layer>
  <objectgroup name="ground">
   <object id="38" x="2214" y="510.667">
-   <polyline points="0,0 49,0 48.4897,12 1.02083,13.3333 1.53125,-1.33333"/>
+   <polyline points="0,0 75,2 48.4897,12 1.02083,13.3333 1.53125,-1.33333"/>
   </object>
   <object id="48" x="0" y="768">
    <polyline points="0,0 1537.33,2.66667"/>
   </object>
-  <object id="49" x="1540" y="644">
-   <polyline points="0,0 252,-1.33333"/>
+  <object id="49" x="1535.33" y="640">
+   <polyline points="0,0 261.333,-1.33333"/>
   </object>
   <object id="51" x="1797.33" y="516">
    <polyline points="0,0 241.333,0"/>
@@ -714,11 +714,11 @@
   <object id="56" x="3333.33" y="516">
    <polyline points="-1.33333,-1.13687e-13 109.333,0"/>
   </object>
-  <object id="57" x="3462.67" y="385.333">
-   <polyline points="0,0 746.667,2.66667"/>
+  <object id="57" x="3562" y="389.333">
+   <polyline points="0,0 653.337,2.66667"/>
   </object>
-  <object id="61" x="4360" y="514.667">
-   <polyline points="0,0 360,0"/>
+  <object id="61" x="4370" y="514.667">
+   <polyline points="29,-2 360,0"/>
   </object>
  </objectgroup>
  <layer name="winning" width="48" height="7">
@@ -1335,11 +1335,11 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
    <tile gid="263"/>
    <tile gid="0"/>
-   <tile gid="0"/>
    <tile gid="262"/>
-   <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -1407,7 +1407,7 @@
   </data>
  </layer>
  <objectgroup name="wall">
-  <object id="62" x="1540" y="777">
+  <object id="62" x="1540.67" y="781">
    <polyline points="0,0 -1.33333,-127"/>
   </object>
   <object id="63" x="1796" y="636">

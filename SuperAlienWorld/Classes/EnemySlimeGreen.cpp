@@ -1,5 +1,6 @@
 #include "EnemySlimeGreen.h"
 
+using namespace Actors;
 
 bool EnemySlimeGreen::init()
 {

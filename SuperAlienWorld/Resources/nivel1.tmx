@@ -1398,12 +1398,6 @@
   <object id="40" x="1667" y="638">
    <polyline points="0,0 -2,-108 1,-119"/>
   </object>
-  <object id="41" x="2938" y="521">
-   <polyline points="2,-3 1,116"/>
-  </object>
-  <object id="42" x="3065" y="647">
-   <polyline points="0,0 2,115"/>
-  </object>
   <object id="44" x="1547" y="643">
    <polyline points="0,0 0,122"/>
   </object>

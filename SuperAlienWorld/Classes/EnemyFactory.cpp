@@ -8,6 +8,8 @@
 #include "EnemySnail.h"
 #include "EnemyMouse.h"
 
+using namespace Levels;
+using namespace Actors;
 
 EnemyFactory* EnemyFactory::_instance = nullptr;
 EnemyFactory::EnemyFactory(){}

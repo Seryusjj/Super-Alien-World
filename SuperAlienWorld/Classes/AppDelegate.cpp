@@ -31,7 +31,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();
     if(!glview) {
-        glview = GLViewImpl::create("Super alien world");
+        glview = GLViewImpl::create("Super alien");
 		
         director->setOpenGLView(glview);
     }
@@ -44,7 +44,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     register_all_packages();
 
 	
-	auto scene = MainMenuLayer::createScene();
+	auto scene = Menus::MainMenuLayer::createScene();
     director->runWithScene(scene);
 
     return true;

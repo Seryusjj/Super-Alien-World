@@ -4,25 +4,27 @@
 #include "BackGround3Parts.h"
 #include "cocos2d.h"
 
-class BaseMenuLayer :public cocos2d::Layer
-{
-protected:
-	BackGround3Parts* _bg;
-	cocos2d::Size _visibleSize;
-	cocos2d::SpriteBatchNode* _gameBatchNode;
+namespace Menus{
+	class BaseMenuLayer :public cocos2d::Layer
+	{
+	protected:
+		BackGround3Parts* _bg;
+		cocos2d::Size _visibleSize;
+		cocos2d::SpriteBatchNode* _gameBatchNode;
 
-public:
-	BaseMenuLayer();
-	virtual ~BaseMenuLayer();
+	public:
+		BaseMenuLayer();
+		virtual ~BaseMenuLayer();
 
-	virtual void update(float dt);
-	virtual bool init();
+		virtual void update(float dt);
+		virtual bool init();
 
-	static cocos2d::Scene* createScene();
+		static cocos2d::Scene* createScene();
 
-	// implement the "static create()" method manually
-	CREATE_FUNC(BaseMenuLayer);
-};
+		// implement the "static create()" method manually
+		CREATE_FUNC(BaseMenuLayer);
+	};
+}
 
 #endif
 

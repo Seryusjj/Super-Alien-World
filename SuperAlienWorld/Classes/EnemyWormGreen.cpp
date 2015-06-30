@@ -1,5 +1,6 @@
 #include "EnemyWormGreen.h"
 
+using namespace Actors;
 
 bool EnemyWormGreen::init()
 {

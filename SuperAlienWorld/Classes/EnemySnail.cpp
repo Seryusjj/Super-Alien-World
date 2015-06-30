@@ -1,5 +1,7 @@
 #include "EnemySnail.h"
 
+using namespace Actors;
+
 bool EnemySnail::init()
 {
 	if (!Enemy::init())

@@ -2,6 +2,7 @@
 
 
 USING_NS_CC;
+using namespace Levels;
 
 GameManager* GameManager::_instance = nullptr;
 

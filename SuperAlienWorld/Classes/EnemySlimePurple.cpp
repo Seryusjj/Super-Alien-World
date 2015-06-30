@@ -1,7 +1,7 @@
 #include "EnemySlimePurple.h"
 
 
-
+using namespace Actors;
 
 
 bool EnemySlimePurple::init()

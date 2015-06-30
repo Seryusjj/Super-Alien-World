@@ -11,6 +11,8 @@
 
 USING_NS_CC;
 using namespace ui;
+using namespace Menus;
+using namespace Levels;
 
 Scene* MainMenuLayer::createScene()
 {
@@ -66,9 +68,17 @@ void MainMenuLayer::initFunctions(std::vector<std::function<void(Ref*)>>& functi
 	functions.push_back(CC_CALLBACK_0(MainMenuLayer::actionButton1, this));
 	functions.push_back(CC_CALLBACK_0(MainMenuLayer::actionButton2, this));
 	functions.push_back(CC_CALLBACK_0(MainMenuLayer::actionButton3, this));
+
+	functions.push_back(CC_CALLBACK_0(MainMenuLayer::actionButton4, this));
+	functions.push_back(CC_CALLBACK_0(MainMenuLayer::actionButton5, this));
+	functions.push_back(CC_CALLBACK_0(MainMenuLayer::actionButton6, this));
 }
 
-void MainMenuLayer::actionButton1(){ Director::getInstance()->replaceScene(BaseLevel::createScene()); }
+void MainMenuLayer::actionButton1(){ Director::getInstance()->replaceScene(Level1::createScene()); }
 void MainMenuLayer::actionButton2(){ Director::getInstance()->replaceScene(Level2::createScene()); }
 void MainMenuLayer::actionButton3(){ Director::getInstance()->replaceScene(Level3::createScene()); }
+
+void MainMenuLayer::actionButton4(){ Director::getInstance()->replaceScene(Level1::createScene()); }
+void MainMenuLayer::actionButton5(){ Director::getInstance()->replaceScene(Level2::createScene()); }
+void MainMenuLayer::actionButton6(){ Director::getInstance()->replaceScene(Level3::createScene()); }
 

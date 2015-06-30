@@ -10,64 +10,64 @@
     <Filter Include="src">
       <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\enemies">
-      <UniqueIdentifier>{47bea3fc-90fb-436d-9486-3020609cc0c9}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\headers">
       <UniqueIdentifier>{2a493483-a226-4996-a3c8-fd331adf324c}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\menus">
       <UniqueIdentifier>{84e69cf6-c76b-44eb-b6cc-dac4f8e88e09}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\actors">
+      <UniqueIdentifier>{31ff95bb-2fe7-40cc-acca-e66980e604a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\actors\enemies">
+      <UniqueIdentifier>{47bea3fc-90fb-436d-9486-3020609cc0c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\levels">
+      <UniqueIdentifier>{238f777e-3122-4e3a-b31e-e0e53a15ee8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\headers\menus">
+      <UniqueIdentifier>{a4a589c0-40d5-46cf-961b-42762b0c906c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\headers\actors">
+      <UniqueIdentifier>{3cbd16cf-a0c4-44e4-819c-07adc999aba1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\headers\levels">
+      <UniqueIdentifier>{1e32508b-a74d-4354-b508-92b3e8c96d0f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>win32</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\Player.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\AppDelegate.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\BaseLevel.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\EnemyFactory.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\Enemy.cpp">
-      <Filter>src\enemies</Filter>
+      <Filter>src\actors\enemies</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\EnemyFrog.cpp">
-      <Filter>src\enemies</Filter>
+      <Filter>src\actors\enemies</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\EnemyLadybug.cpp">
-      <Filter>src\enemies</Filter>
+      <Filter>src\actors\enemies</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\EnemyMouse.cpp">
-      <Filter>src\enemies</Filter>
+      <Filter>src\actors\enemies</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\EnemySlimeBlue.cpp">
-      <Filter>src\enemies</Filter>
+      <Filter>src\actors\enemies</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\EnemySlimeGreen.cpp">
-      <Filter>src\enemies</Filter>
+      <Filter>src\actors\enemies</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\EnemySlimePurple.cpp">
-      <Filter>src\enemies</Filter>
+      <Filter>src\actors\enemies</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\EnemySnail.cpp">
-      <Filter>src\enemies</Filter>
+      <Filter>src\actors\enemies</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\EnemyWormGreen.cpp">
-      <Filter>src\enemies</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\BackGround3Parts.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\GameManager.cpp">
-      <Filter>src</Filter>
+      <Filter>src\actors\enemies</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\BaseMenuLayer.cpp">
       <Filter>src\menus</Filter>
@@ -78,79 +78,94 @@
     <ClCompile Include="..\Classes\SelectMenuLayer.cpp">
       <Filter>src\menus</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\Level2.cpp">
-      <Filter>src</Filter>
+    <ClCompile Include="..\Classes\Player.cpp">
+      <Filter>src\actors</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Level3.cpp">
-      <Filter>src</Filter>
+      <Filter>src\levels</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Level2.cpp">
+      <Filter>src\levels</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BackGround3Parts.cpp">
+      <Filter>src\menus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EnemyFactory.cpp">
+      <Filter>src\levels</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Level1.cpp">
+      <Filter>src\levels</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GameManager.cpp">
+      <Filter>src\levels</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
       <Filter>win32</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\Enemy.h">
-      <Filter>src\headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\EnemyFrog.h">
-      <Filter>src\headers</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\AppDelegate.h">
-      <Filter>src\headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\BaseLevel.h">
-      <Filter>src\headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\EnemyFactory.h">
       <Filter>src\headers</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Tags.h">
       <Filter>src\headers</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\Player.h">
-      <Filter>src\headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\EnemyLadybug.h">
-      <Filter>src\headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\EnemyMouse.h">
-      <Filter>src\headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\EnemySlimeBlue.h">
-      <Filter>src\headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\EnemySlimeGreen.h">
-      <Filter>src\headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\EnemySlimePurple.h">
-      <Filter>src\headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\EnemySnail.h">
-      <Filter>src\headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\EnemyWormGreen.h">
-      <Filter>src\headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\BaseMenuLayer.h">
-      <Filter>src\menus</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\MainMenuLayer.h">
-      <Filter>src\menus</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\SelectMenuLayer.h">
-      <Filter>src\menus</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Level3.h">
-      <Filter>src\headers</Filter>
+    <ClInclude Include="..\Classes\Level1.h">
+      <Filter>src\headers\levels</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Level2.h">
-      <Filter>src\headers</Filter>
+      <Filter>src\headers\levels</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\BackGround3Parts.h">
-      <Filter>src\headers</Filter>
+    <ClInclude Include="..\Classes\Level3.h">
+      <Filter>src\headers\levels</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\GameManager.h">
-      <Filter>src\headers</Filter>
+      <Filter>src\headers\levels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemyFactory.h">
+      <Filter>src\headers\levels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BackGround3Parts.h">
+      <Filter>src\headers\menus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Enemy.h">
+      <Filter>src\headers\actors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemyFrog.h">
+      <Filter>src\headers\actors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemyLadybug.h">
+      <Filter>src\headers\actors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemyMouse.h">
+      <Filter>src\headers\actors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemySlimeBlue.h">
+      <Filter>src\headers\actors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemySlimeGreen.h">
+      <Filter>src\headers\actors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemySlimePurple.h">
+      <Filter>src\headers\actors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemySnail.h">
+      <Filter>src\headers\actors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemyWormGreen.h">
+      <Filter>src\headers\actors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Player.h">
+      <Filter>src\headers\actors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SelectMenuLayer.h">
+      <Filter>src\headers\menus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MainMenuLayer.h">
+      <Filter>src\headers\menus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BaseMenuLayer.h">
+      <Filter>src\headers\menus</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

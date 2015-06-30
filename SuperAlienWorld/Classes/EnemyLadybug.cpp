@@ -1,6 +1,6 @@
 #include "EnemyLadybug.h"
 
-
+using namespace Actors;
 
 bool EnemyLadybug::init()
 {

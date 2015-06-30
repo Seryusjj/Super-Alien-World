@@ -1,5 +1,7 @@
 #include "EnemySlimeBlue.h"
 
+using namespace Actors;
+
 bool EnemySlimeBlue::init()
 {
 	if (!Enemy::init())

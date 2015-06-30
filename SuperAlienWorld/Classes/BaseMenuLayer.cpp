@@ -1,5 +1,6 @@
 #include "BaseMenuLayer.h"
 
+using namespace Menus;
 
 USING_NS_CC;
 

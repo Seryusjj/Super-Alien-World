@@ -1,13 +1,13 @@
 #pragma once
 
 #include "Enemy.h"
-
-class EnemySlimePurple : public Enemy
-{
-protected:
-	virtual void setEnemyType() override;
-public:
-	virtual bool init() override;
-	CREATE_FUNC(EnemySlimePurple);
-};
-
+namespace Actors{
+	class EnemySlimePurple : public Enemy
+	{
+	protected:
+		virtual void setEnemyType() override;
+	public:
+		virtual bool init() override;
+		CREATE_FUNC(EnemySlimePurple);
+	};
+}

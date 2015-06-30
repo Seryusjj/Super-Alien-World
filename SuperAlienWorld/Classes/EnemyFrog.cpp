@@ -1,6 +1,6 @@
 #include "EnemyFrog.h"
 
-
+using namespace Actors;
 bool EnemyFrog::init()
 {
 	if (!Enemy::init())

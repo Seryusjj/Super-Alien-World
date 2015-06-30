@@ -1,5 +1,6 @@
 #include "EnemyMouse.h"
 
+using namespace Actors;
 
 bool EnemyMouse::init()
 {

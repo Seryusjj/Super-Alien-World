@@ -5,6 +5,7 @@
 
 USING_NS_CC;
 
+using namespace Actors;
 
 bool Enemy::init()
 {
@@ -36,7 +37,6 @@ void Enemy::setEnemyType(){
 void Enemy::createRunAnimation()
 {
 	Animation* animation = animation = Animation::create();
-
 	animation->addSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName(_baseSpriteName));
 	animation->addSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName(_baseSpriteName + "_move"));
 	animation->setDelayPerUnit(0.20f);
@@ -72,12 +72,12 @@ void Enemy::setCurrentAnimation(Animations newAnimation)
 
 void Enemy::physicsSetUp()
 {
-	//listen to contacts
+	//escucha las colisiones
 	auto contactListener = EventListenerPhysicsContact::create();
 	contactListener->onContactBegin = CC_CALLBACK_1(Enemy::onContactBegin, this);
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(contactListener, this);
 
-	//physics body
+	//fisica del enemigo
 	auto enemyPhysicsBody = PhysicsBody::createBox(getBoundingBox().size);
 	enemyPhysicsBody->setContactTestBitmask(PLAYER_CONTACT_MASK);
 	enemyPhysicsBody->setRotationEnable(false);
@@ -117,6 +117,7 @@ bool Enemy::onContactBegin(PhysicsContact& contact){
 
 
 void Enemy::createBehaviour(){
+	//mueve el enemigo de un lado a otro
 	auto moveLeft = MoveTo::create(1.5f, Point(getPositionX() - 100, getPositionY()));
 	CallFunc *flip1 = CallFunc::create(CC_CALLBACK_0(Enemy::setScaleX, this, getScaleX()*-1));
 	auto moveRight = MoveTo::create(1.5f, Point(getPositionX() + 100, getPositionY()));

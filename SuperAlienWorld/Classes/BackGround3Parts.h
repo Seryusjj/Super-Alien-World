@@ -3,28 +3,30 @@
 
 #include "cocos2d.h"
 
-class BackGround3Parts
-{
+namespace Menus{
 
-private:
-	bool _initialiced;
-	cocos2d::Size _screen;
-	cocos2d::Sprite* _bgPart1;
-	cocos2d::Sprite* _bgPart2;
-	cocos2d::Sprite* _bgPart3;
-	cocos2d::Sprite* _bgPart4;
-	cocos2d::Sprite* _bgPart5;
+	class BackGround3Parts
+	{
 
-	std::string  _sptitePart1;
-	std::string  _sptitePart2;
+	private:
+		bool _initialiced;
+		cocos2d::Size _screen;
+		cocos2d::Sprite* _bgPart1;
+		cocos2d::Sprite* _bgPart2;
+		cocos2d::Sprite* _bgPart3;
+		cocos2d::Sprite* _bgPart4;
+		cocos2d::Sprite* _bgPart5;
 
-public:
-	virtual void setParent(cocos2d::Node* parent);
-	void update(float dt);
-	BackGround3Parts();
-	~BackGround3Parts();
+		std::string  _sptitePart1;
+		std::string  _sptitePart2;
 
-	CC_SYNTHESIZE(float, _speed, Speed);
-};
+	public:
+		virtual void setParent(cocos2d::Node* parent);
+		void update(float dt);
+		BackGround3Parts();
+		~BackGround3Parts();
 
+		CC_SYNTHESIZE(float, _speed, Speed);
+	};
+}
 #endif //__BACKGROUND3PARTS_H__

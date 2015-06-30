@@ -2,6 +2,8 @@
 
 
 USING_NS_CC;
+using namespace Levels;
+using namespace Levels;
 
 Scene* Level3::createScene()
 {
@@ -13,7 +15,7 @@ Scene* Level3::createScene()
 }
 
 bool Level3::init(){
-	if (!BaseLevel::init()){
+	if (!Level1::init()){
 		return false;
 	}
 	return true;

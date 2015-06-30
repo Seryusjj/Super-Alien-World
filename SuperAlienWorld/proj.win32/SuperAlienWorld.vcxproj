@@ -141,7 +141,8 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y</Command>
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
     <ClCompile Include="..\Classes\BackGround3Parts.cpp" />
-    <ClCompile Include="..\Classes\BaseLevel.cpp" />
+    <ClCompile Include="..\Classes\GameManager.cpp" />
+    <ClCompile Include="..\Classes\Level1.cpp" />
     <ClCompile Include="..\Classes\BaseMenuLayer.cpp" />
     <ClCompile Include="..\Classes\Enemy.cpp" />
     <ClCompile Include="..\Classes\EnemyFactory.cpp" />
@@ -153,7 +154,6 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y</Command>
     <ClCompile Include="..\Classes\EnemySlimePurple.cpp" />
     <ClCompile Include="..\Classes\EnemySnail.cpp" />
     <ClCompile Include="..\Classes\EnemyWormGreen.cpp" />
-    <ClCompile Include="..\Classes\GameManager.cpp" />
     <ClCompile Include="..\Classes\Level2.cpp" />
     <ClCompile Include="..\Classes\Level3.cpp" />
     <ClCompile Include="..\Classes\MainMenuLayer.cpp" />
@@ -164,7 +164,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y</Command>
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h" />
     <ClInclude Include="..\Classes\BackGround3Parts.h" />
-    <ClInclude Include="..\Classes\BaseLevel.h" />
+    <ClInclude Include="..\Classes\Level1.h" />
     <ClInclude Include="..\Classes\BaseMenuLayer.h" />
     <ClInclude Include="..\Classes\Enemy.h" />
     <ClInclude Include="..\Classes\EnemyFactory.h" />
